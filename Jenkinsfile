@@ -15,7 +15,7 @@ pipeline {
         stage ('Trigger E2E tests') {
             steps {
                 // Quiet period 300 sec and dont wait for the test results
-                build job: 'jenkins-python', quietPeriod: 10, wait: false, parameters: [string(name: 'TEAMFORGE_CORE_BUILD_VERSION', value: '19.1.120'), ]
+                build job: 'jenkins-python', quietPeriod: 1, wait: false, parameters: [string(name: 'TEAMFORGE_CORE_BUILD_VERSION', value: '19.1.120'), ]
             }
         }
     }
