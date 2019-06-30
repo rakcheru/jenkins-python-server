@@ -8,7 +8,9 @@ pipeline {
             }
         }
         stage ('Trigger E2E tests') {
-            build job: 'jenkins-python', wait: false
+            steps {
+                build job: 'jenkins-python', wait: false
+            }
         }
     }
 }
