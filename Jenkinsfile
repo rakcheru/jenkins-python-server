@@ -7,7 +7,7 @@ pipeline {
                 checkout scm
             }
         }
-        stage {
+        stage ('Trigger E2E tests') {
             build job: 'jenkins-python', wait: false
         }
     }
